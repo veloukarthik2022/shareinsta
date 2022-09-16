@@ -19,6 +19,10 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
     return $request->user();
 });
 
+Route::get("/",function(){
+       return "share insta api";
+});
+
 Route::group(['prefix' => 'v1'], function () {
 
     Route::get("/customer", "CustomerController@index");
